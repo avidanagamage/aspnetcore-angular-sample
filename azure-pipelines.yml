@@ -28,7 +28,6 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: false
-    projects: 'dotnet/src/**/*Api.csproj'
     arguments: '-c $(BuildConfiguration) -o $(Build.ArtifactStagingDirectory)'
     modifyOutputPath: false
 
