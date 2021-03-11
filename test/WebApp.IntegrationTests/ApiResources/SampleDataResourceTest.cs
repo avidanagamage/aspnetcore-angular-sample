@@ -4,7 +4,7 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
-namespace Devpro.AspNetCoreAngularSample.WebApp.IntegrationTests.ApiResources
+namespace AspNetCoreAngularSample.WebApp.IntegrationTests.ApiResources
 {
     [Trait("Environment", "Localhost")]
     public class SampleDataResourceTest : IClassFixture<WebApplicationFactory<Startup>>

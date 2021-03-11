@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Devpro.AspNetCoreAngularSample.WebApp
+namespace AspNetCoreAngularSample.WebApp
 {
     public static class Program
     {
