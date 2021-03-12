@@ -24,6 +24,13 @@ steps:
     version: '3.1.100'
 
 - task: DotNetCoreCLI@2
+  displayName: 'Run Test'
+  inputs:
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
   displayName: 'Publish the web app'
   inputs:
     command: 'publish'
@@ -36,9 +43,4 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
   condition: succeededOrFailed()
 
-- task: DotNetCoreCLI@2
-  displayName: 'Run Test'
-  inputs:
-    command: test
-    projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
+
