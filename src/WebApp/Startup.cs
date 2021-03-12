@@ -41,7 +41,7 @@ namespace AspNetCoreAngularSample.WebApp
                 app.UseHsts();
             }
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             if (!env.IsDevelopment())
@@ -50,7 +50,7 @@ namespace AspNetCoreAngularSample.WebApp
             }
 
             app.UseRouting();
-            app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            //app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {
