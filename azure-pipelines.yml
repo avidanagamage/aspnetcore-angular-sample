@@ -50,6 +50,12 @@ steps:
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.Repository.LocalPath)/Deployment'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)/Deployment'
+
 - task: DotNetCoreCLI@2
   displayName: 'Publish the web app'
   inputs:
