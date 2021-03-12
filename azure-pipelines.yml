@@ -11,7 +11,7 @@ variables:
 - name: 'BuildConfiguration'
   value: 'Release'
 - name: 'SolutionFile'
-  value: 'AspNetCoreAngularSample'
+  value: 'AspNetCoreAngularSample.sln'
 
 pool:
   vmImage: 'ubuntu-latest'
